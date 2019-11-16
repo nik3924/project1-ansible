@@ -6,5 +6,5 @@
 #  git: repo={{ repository }} dest=/var/www/html/
 
 - name: Creates the index.html file
-  template: src=index.html dest=/var/www/html/ owner:jenkins group:jenkins mode:0400
+  copy: src=/var/lib/jenkins/workspace/project1-ansible/roles/web/tasks/index.html dest=/var/www/html/ owner:jenkins group:jenkins mode:0400
 
