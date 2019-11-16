@@ -1,0 +1,21 @@
+---
+# These tasks install http and the php modules.
+
+- include: copy_code.yml
+
+- name: Update the EC2 instance to latest
+  command: sudo yum update -y
+
+- name: Install http and php etc
+  yum: name={{ item }} state=present
+  with_items:
+   - httpd
+ #  - php
+ #  - git
+ #  - telnet
+
+- name: httpd service start
+  service:
+    name: httpd
+    state: started
+    enabled: yes
