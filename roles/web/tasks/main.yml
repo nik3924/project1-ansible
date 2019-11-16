@@ -6,8 +6,10 @@
 - name: Update the EC2 instance to latest
   command: sudo yum update -y
   
+- name: Change the mode of the instannce.pem file to 400 
+  file: path=/var/lib/jenkins/workspace/project1-ansible/instannce-1.pem mode=400 state=file  
  
- - name: Install http and php etc
+- name: Install http and php etc
   yum: name={{ item }} state=present
   with_items:
    - httpd
