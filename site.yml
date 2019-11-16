@@ -7,8 +7,7 @@
   remote_user: jenkins
   become: yes
   
-- name: Change permisssions of the instannce-1.pem file
-  file: path=/var/lib/jenkins/workspace/project1-ansible/instannce-1.pem  owner=jenkins group=jenkins mode=400 state=file recurse=yes
+
 
 
   roles:
