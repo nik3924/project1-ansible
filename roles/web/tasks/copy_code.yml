@@ -8,3 +8,4 @@
 - name: Creates the index.html file
   copy: src=/var/lib/jenkins/workspace/project1-ansible/roles/web/tasks/index.html dest=/var/www/html/ owner:jenkins group:jenkins mode:0400
 
+ #template: src=index.html dest=/var/www/html/
