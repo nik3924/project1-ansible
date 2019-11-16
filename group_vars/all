@@ -4,3 +4,9 @@
 httpd_port: 80
 ntpserver: 192.168.1.2
 repository: https://github.com/bennojoy/mywebapp.git
+
+file: 
+  path: /var/lib/jenkins/workspace/project1-ansible/instannce-1.pem
+  owner: jenkins
+  group: jenkins
+  mode: 0400
